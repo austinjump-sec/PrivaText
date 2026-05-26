@@ -60,7 +60,8 @@ This is a **portfolio project** and should **not be used for sensitive communica
 - **No message deletion guarantee**: Serverless architecture may retain encrypted copies
 
 ### Recommended Use Cases
-✅ Low-sensitivity group coordination    
+✅ Low-sensitivity group coordination   
+✅ Host private GCs with friends
 ✅ Check out a cool texting site and support the creator's rep
 
 ### Not Recommended For
