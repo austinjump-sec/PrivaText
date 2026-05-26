@@ -4,7 +4,8 @@
 
 ## Overview
 
-PrivaText is a portfolio project showcasing encrypted, password-protected group chat functionality built on serverless infrastructure. The application demonstrates key concepts in client-side encryption, cryptographic protocols, and serverless architecture patterns while maintaining transparency about its limitations.
+PrivaText is a portfolio project showcasing encrypted, password-protected group chat functionality built on serverless infrastructure. 
+It is fully functional, stable, usable, and has custom styles.
 
 ## Features
 
@@ -12,7 +13,7 @@ PrivaText is a portfolio project showcasing encrypted, password-protected group 
 - 🔒 **Password Protection**: Access control for chat groups
 - 📱 **Serverless Architecture**: Stateless, scalable deployment model
 - 💬 **Real-time Messaging**: Live group communication
-- 🎬 **Limited Media Support**: Image/video sharing capabilities
+- 🎬 **Limited Media Support**: Image/video sharing capabilities (45kb limit)
 - 💻 **Portfolio Showcase**: Clean implementation of cryptographic patterns and web architecture
 
 ## Technology Stack
@@ -34,20 +35,17 @@ PrivaText is a portfolio project showcasing encrypted, password-protected group 
 
 ### Important Limitations ⚠️
 
-This is a **portfolio/educational project** and should **not be used for sensitive communications**. Be aware of these limitations:
+This is a **portfolio project** and should **not be used for sensitive communications**. Be aware of these limitations:
 
 #### Cryptographic Considerations
 - **No formal security audit**: This code has not been audited by security professionals
 - **Educational implementation**: Cryptographic implementations are for demonstration purposes
-- **Browser crypto dependencies**: Security relies on browser WebCrypto API implementations
-- **Key derivation**: Password-based key derivation may not meet production-grade entropy requirements
+- **Key derivation**: Password-based key derivation is limited due to serverless-infrastructure
 
 #### Serverless Infrastructure Limitations
 - **Metadata exposure**: Serverless platforms log timestamps, IP addresses, and request patterns
 - **Provider visibility**: Your cloud provider has access to metadata (though not encrypted content)
-- **No perfect forward secrecy**: Historical messages cannot be guaranteed as deleted
 - **Statelessness trade-offs**: Reliance on external storage for persistence
-- **Rate limiting**: May expose usage patterns
 
 #### Nostr/Decentralized Protocol Limitations
 - **Decentralized doesn't mean private**: Nostr relays store events with timestamps and metadata
@@ -59,16 +57,11 @@ This is a **portfolio/educational project** and should **not be used for sensiti
 #### Additional Constraints
 - **Limited media handling**: Not optimized for sensitive media encryption workflows
 - **Single password model**: Group-wide password sharing model doesn't provide individual accountability
-- **Session management**: Browser-based sessions vulnerable to XSS and similar attacks
 - **No message deletion guarantee**: Serverless architecture may retain encrypted copies
 
 ### Recommended Use Cases
-
-✅ Educational learning about cryptography  
-✅ Portfolio demonstration of web architecture  
-✅ Low-sensitivity group coordination  
-✅ Understanding decentralized protocols  
-✅ Exploring serverless design patterns
+✅ Low-sensitivity group coordination    
+✅ Check out a cool texting site and support the creator's rep
 
 ### Not Recommended For
 
@@ -79,4 +72,4 @@ This is a **portfolio/educational project** and should **not be used for sensiti
 ❌ Production security-critical applications  
 ❌ Whistleblowing or dissent in hostile environments
 
-## Architecture
+
