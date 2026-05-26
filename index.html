@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>>PrivaText - Secure Encrypted Chat Rooms</title>
+  <meta name="description" content="PrivaText offers anonymous, encrypted, password-protected group chats with no backend or database." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="PrivaText - Secure Encrypted Chat Rooms" />
+<meta property="og:description" content="Anonymous, password-protected encrypted chat rooms with no backend." />
+  <link rel='icon' href='https://img.freepik.com/premium-psd/green-padlock-icon_1223360-5703.jpg' />
+  <link rel='stylesheet' href='styles1.css' />
+  </head>
+  <body>
+    <h1 id='tittle'>>PrivaText</h1>
+    <dialog id='enterCode'>
+      <h1>Enter Code</h1>
+      <textarea id='codeEnter'></textarea>
+      <button id='try'>Try</button>
+      
+    </dialog>
+    <dialog id='snapMenu'>
+      <div class="camera-container">
+    <!-- Hidden video feeds the canvas -->
+    <video id="webcam" autoplay playsinline style="display:none;"></video>
+    <!-- Viewfinder -->
+    <canvas id="viewfinder" width="400" height="400" style="border:1px solid #ccc; width:100%; max-width:400px;"></canvas>
+    <br>
+    <button id="snap2">Take Photo</button>
+    <button id='swap'>Swap Camera</button>
+    <button id='cancel2'>Cancel</button>
+</div>
+
+    </dialog>
+    <dialog id='makeRoom' class='modal'>
+      <textarea id='customRoom' placeholder='Make Room Title'></textarea> <br>
+      <textarea id='customCode' placeholder='Make Room Code'></textarea> <br>
+      <button id='create'>Create</button> <br> <button id='cancel'>Cancel</button>
+    </dialog>
+    <dialog id='goTo' class='modal'>
+      <textarea id='gotoRoom' placeholder='Enter Room Name'></textarea><br>
+      <textarea id='enterPass' placeholder='Enter Room Code'></textarea>
+      <p id='incorrect'></p> <br>
+      <button id='go'>Enter</button> <br> <button id='cancel1'>Cancel</button>
+    </dialog>
+      <div id='allOfEm'>
+      <div id='mainChat'></div>
+      <div id='userHub'>
+        <textarea placeholder='Enter name' id='enterName'></textarea>
+        <textarea id='message' placeholder='Write message'></textarea> <br>
+        <input type="file" id="fileInput" accept="image/*,video/*" />
+        <button id='send'>Send</button>
+        <button id='clear'>Clear All Messages</button>
+        <button id='snap'>Take Snap</button>
+        <div>
+          <p>Room Settings</p>
+          <button id='creator'>Create Room</button>
+          <button id='load'>Enter Room</button>
+          <button id='toggleStorage'>Toggle Storage (less anonymity)</button>
+        </div>
+        <p>Rooms</p>
+        <div id='buttons'></div>
+        <div id='colors'>
+          <p>Colors</p>
+          <button id ='default'>Default</button> <br>
+          <button id='redBlack'>Red and Black</button>
+          <button id='pinkBlack'>Pink and Black</button>
+          <button id='grayBlack'>Gray and Black</button>
+          <button id='yellowBlack'>Black and Yellow</button>
+          <button id='redPink'>Red and Pink</button>
+          <button id='purpBlack'>Purple and Black</button><br>
+          <button id='candy'>Cotton Candy</button><br>
+          <button id='evilcandy'>Dark Neon</button><br>
+          <button id='lehax'>Le Hax</button><br>
+          <button id='miami'>Teal</button><br>
+          <button id='lain'>Lain</button>
+        </div>
+      </div>
+      </div>
+          <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
+  <script src="script1.js?v=1.1.9"></script>
+  </body>
+</html>
