@@ -1,0 +1,252 @@
+:root {
+  /* Default Yotsuba Colors */
+  --bg-body: #FEFFEE;
+  --bg-chat: #9cd69c;
+  --bg-hub: #c6e8a7;
+  --bg-btn: #fcffd1;
+  --bg-btn-hover: #69d66e;
+  --text: #111;
+  --border: #111;
+  --greentext-color: #c0e89e;
+  --placeholder-color: #28b002;
+  --textBg-color: #dde0af;
+  --textA-color: #28b002;
+  --mod-color: #c6e8a7;
+  --mod-col:#000;
+  --title-c:#28b002 ;
+  --h1-col:#28b002;
+}
+#tittle{
+  text-align: center;
+  color: var(--title-c);
+}
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 8px #67cfa9, 0 0 15px #67cfa9;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+#mainChat::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+/* For Firefox: Making the scrollbar thin often removes the arrows automatically */
+#mainChat {
+  scrollbar-width: thin; 
+}
+
+@keyframes scrollGrid {
+  from { background-position: 0 0; }
+  to { background-position: 30px 30px; } /* Must match background-size for seamless looping */
+}
+/* Theme Overrides */
+[data-theme='redBlack'] { --bg-body: #000000;
+--bg-chat: #7a0c06;
+--bg-hub: #d61e1e;
+--text: #ff4d4d;
+--bg-btn: #8f0404;
+--bg-btn-hover: #000000;
+--h1-col:#000;
+}
+ [data-theme='redBlack'] {--usersChat-color: #000; --textBg-color: #000;  --userName-color:#f50b07; --greentext-color:#c26e6e; --textA-color:#ff0000; --placeholder-color:#ff0000; --mod-color:#f50b07; --title-c:#ff0000;}
+[data-theme='pinkBlack'] { --bg-body: #000; --textBg-color: #000; --h1-col:#000; --bg-chat: #4d002a; --bg-hub: #f50599; --text: #ff69b4; --bg-btn: #33001a; --bg-btn-hover: #ff1493; --usersChat-color:#f274b5; --userName-color:#ed0e51; --greentext-color:#000; --textA-color:#ff00d9; --placeholder-color:#ff00d9; --mod-color:#f274b5; --title-c:#f50599;}
+[data-theme='grayBlack'] { --bg-body: #111; --textBg-color: #000; --h1-col:#fff; --bg-chat: #333; --bg-hub: #000; --text: #ccc; --bg-btn: #444; --bg-btn-hover: #666;  --usersChat-color:#d6c5ca ;  --userName-color:#fafafa ; --greentext-color:#000000; --textA-color:#c9bdc8; --placeholder-color:#c9bdc8; --mod-color:#d6c5ca; --title-c:#c9bdc8;}
+[data-theme='yellowBlack'] { --bg-body: #b59204; --textBg-color: #000; --h1-col:#b59204; --bg-chat: #111; --bg-hub: #222; --text: #ffcc00; --bg-btn: #333; --bg-btn-hover: #000;  --usersChat-color:#ebc400 ;  --userName-color:#ebc400 ; --greentext-color:#000 ;--textA-color:#ffbb00; --placeholder-color:#ffbb00; --mod-color:#ebc400; --title-c:#000;}
+[data-theme='redPink'] { --bg-body: #ffc1cc; --h1-col:#ff5975; --bg-chat: #ff007f; --bg-hub: #ff5975; --text: #fff; --bg-btn: #ff69b4; --bg-btn-hover: #ff007f;  --usersChat-color:#ff0015 ;  --userName-color:#ff0066 ; --greentext-color:#7a071e ; --textA-color:#fc68b7; --textBg-color:#4f0b07; --placeholder-color:#fc68b7; --mod-color:#ff007f; --title-c:#ff007f;} 
+[data-theme='purpBlack'] { --bg-body: #0a000f; --textBg-color: #000; --h1-col:#bf00ff; --bg-chat: #1a002a; --bg-hub: #25003e; --text: #bf00ff; --bg-btn: #3c0062; --bg-btn-hover: #000;  --usersChat-color:#e809d3 ;  --userName-color:#e809d3 ; --greentext-color:#000;--textA-color:#aa00ff; --placeholder-color:#aa00ff; --mod-color:#aa00ff; --title-c:#bf00ff;}
+[data-theme='candy']{ --bg-body:#ffffff; --bg-chat:#b8e3de; --h1-col:#fab1e7; --bg-hub:#fab1e7; --text:#fff;  --bg-btn:#48f7fa; --bg-btn-hover: #ff7ddc; --usersChat-color:#fff; --userName-color: #fff; --greentext-color:#fab1e7; --textA-color:#fab1e7; --placeholder-color:#fab1e7; --textBg-color:#ccfcf7; --mod-color:#fab1e7 ; --title-c:#fab1e7;}
+[data-theme='evilcandy']{ --bg-body:#000;  --bg-chat:#a8fff5; --h1-col:#fab1e7; --bg-hub:#fab1e7; --text:#000;  --bg-btn:#48f7fa; --bg-btn-hover: #ff7ddc; --usersChat-color:#fab1e7; --userName-color: #ccfcf7; --greentext-color:#000; --textA-color:#fab1e7; --placeholder-color:#fab1e7; --textBg-color:#ccfcf7; --mod-color:#fab1e7; --title-c:#fab1e7;}
+[data-theme='lehax']{--bg-body: #050505; --textBg-color: #000; --h1-col:#00ff41; --bg-chat: #000; --bg-hub: #0d0d0d; --text: #00ff41; --border: #008f11; --bg-btn:#000; --greentext-color:#3b4736; --mod-color:#000; --mod-col:#008f11; --title-c:#00ff41;}
+[data-theme='miami']{--bg-body: #282a36;  --textBg-color: #000; --h1-col:#bd93f9;--bg-chat: #44475a; --bg-hub: #6272a4; --text: #f8f8f2; --textA-color: #bd93f9; --bg-btn:#3b8275; --bg-btn-hover:#27b097; --greentext-color:#277eb0; --placeholder-color: #277eb0; --textA-color:#277eb0; --usersChat-color:#b6f2e7; --userName-color:#b6f2e7; --mod-color:#44475a; --mod-col:#fff; --title-c:#6272a4;}
+[data-theme='lain']{--bg-body:#745687; --textBg-color: #000; --h1-col:#67cfa9; --bg-chat:#3f3985; --bg-hub:#307da1; --text:#e94560; --textA-color:#67cfa9; --bg-btn:#6b50a1; --bg-btn-hover:#505ca1; --greentext-color:#826b96; --placeholder-color:#67cfa9; --userName-color:#67cfa9; --usersChat-color:#67cfa9;  --mod-col:#e94560 ; --mod-color:#307da1; --title-c:#67cfa9;}
+[data-theme='lain']{background-image: 
+    linear-gradient(rgba(103, 207, 169, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 207, 169, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px; /* Small grid for that "Wired" look */}
+[data-theme='lain'] h1 {
+  text-shadow: 0 0 8px #67cfa9, 0 0 15px #67cfa9;
+  animation: flicker 3s infinite;
+}
+body[data-theme='lain']::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+  z-index: 99999999999999999999;
+  animation: scrollGrid 20s linear infinite; 
+}
+body[data-theme='lain']::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://cdn.dribbble.com/userupload/21852582/file/original-44cf32a68c1c9cd9197cbe045a9b1959.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   opacity: 0.5
+  /* Control how much the GIF shows through (0.1 is very subtle, 0.5 is strong) */
+  opacity: 0.2; 
+  z-index: -1; /* Places it behind your grid/scanlines */
+  pointer-events: none;
+}
+[data-theme='lain'] .userName, 
+[data-theme='lain'] .textA-color,
+[data-theme='lain'] .usersChat,
+[data-theme='lain'] textarea{
+  text-shadow: 0 0 8px #67cfa9, 0 0 15px #67cfa9;
+  animation: flicker 3s infinite;
+}
+textarea {
+  width: 100px;      /* fixed width */
+  resize: none;  
+  padding: 8px 10px;
+  font-family: monospace;
+  font-size: 14px;
+  border: 1.5px solid #888;
+  border-radius: 2px;
+  background-color: var(--textBg-color); /* soft cream */
+  color: var(--textA-color);
+  font-style: italic;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.usersChat {
+  color: var(--usersChat-color, #789922);
+}
+.userName {
+  color: var(--userName-color, #789922);
+}
+.greentext {
+  color: var(--greentext-color, #789922);
+}
+textarea::placeholder {
+  color: var(--placeholder-color);
+  font-style: italic;
+  opacity: 1;
+  font-family: monospace;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+textarea:focus {
+  outline: none;
+  border-color: #69d66e;  /* highlight color */
+  box-shadow: 0 0 5px 2px rgba(105,214,110,0.5);
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 10px;
+  transition: background 0.3s ease; /* Smooth color transition */
+}
+
+.modal{
+  background-color: var(--mod-color);
+  color: var(--mod-col);
+  z-index: -10;
+}
+#allOfEm {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#mainChat, #userHub, button {
+  border: 2px solid var(--border);
+  box-shadow: 4px 4px 0px var(--border);
+  transition: all 0.1s ease;
+  box-shadow: 
+    inset 4px 4px 8px rgba(0, 0, 0, 0.5), 
+    inset -2px -2px 5px rgba(255, 255, 255, 0.2);
+  transition: all 0.1s ease;
+}
+
+#mainChat {
+  background-color: var(--bg-chat);
+  width: 600px;
+  height: 800px;
+  padding: 5px;
+  overflow-y: scroll;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2), inset -1px -1px 2px rgba(255,255,255,0.1);
+}
+
+#userHub {
+  background-color: var(--bg-hub);
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  background-color: var(--bg-btn);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 5px;
+  font-style: italic;
+  font-family: monospace;
+}
+
+button:hover { background-color: var(--bg-btn-hover); }
+button:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px var(--border); }
+
+
+
+.greentext {
+  font-weight: bold;
+  background-color: rgba(224, 245, 188, 0.5); /* Semi-transparent so theme shows through */
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: var(--greentext-color);
+}
+  opacity: 1; /* Makes it solid black */
+}
+
+/* Ensure the modal itself is visible/styled against the black */
+#enterCode {
+  background: #111; /* Dark gray for the box */
+  color: green;      /* Classic hacker green text */
+  border: 1px solid lime;
+  padding: 2rem;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}
+#codeEnter{
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+}
+#enterCode::backdrop {
+  background-color: black;
+  background-image: url('https://www.bing.com/th/id/OGC.a250da88d856fdd4243795d0c0881e18?o=7&pid=1.7&rm=3&rurl=https%3a%2f%2fmedia1.tenor.com%2fimages%2fa250da88d856fdd4243795d0c0881e18%2ftenor.gif%3fitemid%3d15115506&ehk=EaBAuy34kCF8WRarp9zI%2fpaRJl%2fWKMUEeh986r%2fPWEk%3d');
+  opacity: 1;
+}
+#try{
+  color:green;
+  font-family: 'Courier New', Courier, monospace;
+}
+#enter{
+ color:green;
+ font-family: 'Courier New', Courier, monospace;
+}
+h1{
+  color:var(--h1-col);
+font-family: Courier New, Courier, monospace;
+}
