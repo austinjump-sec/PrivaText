@@ -61,8 +61,7 @@ This is a **portfolio project** and should **not be used for sensitive communica
 
 ### Recommended Use Cases
 ✅ Low-sensitivity group coordination   
-✅ Host private GCs with friends
-✅ Check out a cool texting site and support the creator's rep
+✅ Hosting private GCs with friends
 
 ### Not Recommended For
 
